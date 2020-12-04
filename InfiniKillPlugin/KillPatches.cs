@@ -24,7 +24,7 @@ namespace InfiniKillPlugin
                 JENJGDMOEOC targetPlayer = JENJGDMOEOC.AllPlayerControls[0];
                 foreach (JENJGDMOEOC player in JENJGDMOEOC.AllPlayerControls)
                 {
-                    if (player.NetId != JENJGDMOEOC.LocalPlayer.NetId && !player.CJJDCBHJGBL.OKDGIIGNNMG)
+                    if (player.NetId != JENJGDMOEOC.LocalPlayer.NetId && !player.CJJDCBHJGBL.OKDGIIGNNMG && !player.CJJDCBHJGBL.DOBEJNDNPJI)
                     {
                         float playerX = player.NetTransform.transform.position.x;
                         float playerY = player.NetTransform.transform.position.y;
