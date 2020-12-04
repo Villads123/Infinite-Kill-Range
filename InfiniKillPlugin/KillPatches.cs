@@ -5,45 +5,40 @@ namespace InfiniKillPlugin
 {
     class KillPatches
     {
-        public static double CurDist = double.MaxValue;
-
-        [HarmonyPatch(typeof(EHFMOJPIKPE), nameof(EHFMOJPIKPE.PerformKill))]
-        public static class PerformKillPatch
+        public static double CurDist = double.MaxValue; public static LBADNGJPJGH GetTargetPlayer()
         {
-            public static void Prefix(EHFMOJPIKPE __instance)
+            CurDist = double.MaxValue;
+            LBADNGJPJGH target = LBADNGJPJGH.AllPlayerControls[0];
+            foreach (LBADNGJPJGH player in LBADNGJPJGH.AllPlayerControls)
             {
-                CurDist = double.MaxValue;
-                JENJGDMOEOC targetPlayer = JENJGDMOEOC.AllPlayerControls[0];
-                foreach (JENJGDMOEOC player in JENJGDMOEOC.AllPlayerControls)
+                if (player.NetId != LBADNGJPJGH.LocalPlayer.NetId && !player.NIFDFKDENKA.DHENNPCNJGB && !player.NIFDFKDENKA.FKGFOMBFMHD)
                 {
-                    if (player.NetId != JENJGDMOEOC.LocalPlayer.NetId && !player.CJJDCBHJGBL.OKDGIIGNNMG && !player.CJJDCBHJGBL.DOBEJNDNPJI)
-                    {
-                        float playerX = player.NetTransform.transform.position.x;
-                        float playerY = player.NetTransform.transform.position.y;
-                        float localX = JENJGDMOEOC.LocalPlayer.transform.position.x;
-                        float localY = JENJGDMOEOC.LocalPlayer.transform.position.y;
+                    float playerX = player.NetTransform.transform.position.x;
+                    float playerY = player.NetTransform.transform.position.y;
+                    float localX = LBADNGJPJGH.LocalPlayer.transform.position.x;
+                    float localY = LBADNGJPJGH.LocalPlayer.transform.position.y;
 
-                        float xDistance = Math.Abs(localX - playerX);
-                        float yDistance = Math.Abs(localY - playerY);
-                        double NewDist = Math.Sqrt((xDistance * xDistance) + (yDistance * yDistance));
-                        if (NewDist < CurDist)
-                        {
-                            CurDist = NewDist;
-                            targetPlayer = player;
-                        }
+                    float xDistance = Math.Abs(localX - playerX);
+                    float yDistance = Math.Abs(localY - playerY);
+                    double NewDist = Math.Sqrt((xDistance * xDistance) + (yDistance * yDistance));
+                    if (NewDist < CurDist)
+                    {
+                        CurDist = NewDist;
+                        target = player;
                     }
                 }
-                __instance.SetTarget(targetPlayer);
-                __instance.CurrentTarget = targetPlayer;
             }
+            return target;
         }
-        
-        [HarmonyPatch(typeof(EHFMOJPIKPE), nameof(EHFMOJPIKPE.SetCoolDown))]
-        public static class KillPatch
+
+        [HarmonyPatch(typeof(FEEPMKCPHAP), nameof(FEEPMKCPHAP.PerformKill))]
+        public static class PerformKillPatch
         {
-            public static void Postfix()
+            public static void Prefix(FEEPMKCPHAP __instance)
             {
-                CurDist = double.MaxValue;
+                __instance.isActive = true;
+                __instance.SetTarget(GetTargetPlayer());
+                __instance.CurrentTarget = GetTargetPlayer();
             }
         }
     }

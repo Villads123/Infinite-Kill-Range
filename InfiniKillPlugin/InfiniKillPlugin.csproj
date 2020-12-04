@@ -42,8 +42,9 @@
     <Reference Include="BepInEx.Core">
       <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\core\BepInEx.Core.dll</HintPath>
     </Reference>
-    <Reference Include="BepInEx.IL2CPP">
-      <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\core\BepInEx.IL2CPP.dll</HintPath>
+    <Reference Include="BepInEx.IL2CPP, Version=6.0.0.301, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\XtraCube\BepInEx\core\BepInEx.IL2CPP.dll</HintPath>
     </Reference>
     <Reference Include="Il2Cppmscorlib">
       <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\unhollowed\Il2Cppmscorlib.dll</HintPath>
