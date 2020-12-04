@@ -20,7 +20,7 @@ namespace InfiniKillPlugin
         {
             public static void Prefix(KillButtonManager __instance)
             {
-                double CurDist = double.MaxValue;
+                CurDist = double.MaxValue;
                 PlayerControl targetPlayer = PlayerControl.AllPlayerControls[0];
                 foreach (PlayerControl player in PlayerControl.AllPlayerControls)
                 {
