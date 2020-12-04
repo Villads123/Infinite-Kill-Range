@@ -1,13 +1,5 @@
 ﻿using System;
-using InfiniKillPlugin;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine;
-using BepInEx.Logging;
 using HarmonyLib;
-using UnhollowerBaseLib;
 
 namespace InfiniKillPlugin
 {

@@ -1,15 +1,11 @@
 ﻿using BepInEx.IL2CPP;
 using HarmonyLib;
 using System.Reflection;
-using System.Linq;
-using UnityEngine;
-using Object = UnityEngine.Object;
-using UnhollowerRuntimeLib;
 using BepInEx;
 
 namespace InfiniKillPlugin
 {
-    [BepInPlugin("lol.xtracube.InfiniPlugin", "Infinite Kill Range", "0.0.1")]
+    [BepInPlugin("lol.xtracube.InfiniPlugin", "Infinite Kill Range", "1.0.0")]
     public class InfiniteKillPlugin : BasePlugin  
     {
 
