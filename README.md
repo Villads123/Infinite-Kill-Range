@@ -3,7 +3,7 @@ An Infinite Kill Range mod for Among Us
 
 ## Installation
 THIS ONLY WORKS WITH THE STEAM VERSION! ONLY USE THIS WITH FRIENDS! DON'T USE IT IN ONLINE MATCHES
-1. Here on the right sidebar, choose the latest version that supports your game version.
+1. On the right, click releases, then choose the latest version that supports your game version.
 2. Download the `.dll` and `.zip` files in the release.
 	- You can also download the latest `.zip` of [BepInEx](https://github.com/BepInEx/BepInEx) IL2CPP version (You can download bleeding edge builds [here](https://builds.bepis.io/projects/bepinex_be))
 3. Extract the modloader's(Bepinex) `.zip` into the Among Us directory (where the `Among Us.exe` executable is located)
