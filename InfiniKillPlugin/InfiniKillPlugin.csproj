@@ -35,8 +35,9 @@
     <Reference Include="0Harmony">
       <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\unhollowed\Assembly-CSharp.dll</HintPath>
+    <Reference Include="Assembly-CSharp, Version=3.7.1.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Among Us\BepInEx\unhollowed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="BepInEx.Core">
       <HintPath>..\..\..\..\Documents\depotdownloader-2.3.6\depots\945361\5876303\BepInEx\core\BepInEx.Core.dll</HintPath>

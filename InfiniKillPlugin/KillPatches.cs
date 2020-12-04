@@ -15,21 +15,21 @@ namespace InfiniKillPlugin
     {
         public static double CurDist = double.MaxValue;
 
-        [HarmonyPatch(typeof(KillButtonManager), nameof(KillButtonManager.PerformKill))]
+        [HarmonyPatch(typeof(EHFMOJPIKPE), nameof(EHFMOJPIKPE.PerformKill))]
         public static class PerformKillPatch
         {
-            public static void Prefix(KillButtonManager __instance)
+            public static void Prefix(EHFMOJPIKPE __instance)
             {
                 CurDist = double.MaxValue;
-                PlayerControl targetPlayer = PlayerControl.AllPlayerControls[0];
-                foreach (PlayerControl player in PlayerControl.AllPlayerControls)
+                JENJGDMOEOC targetPlayer = JENJGDMOEOC.AllPlayerControls[0];
+                foreach (JENJGDMOEOC player in JENJGDMOEOC.AllPlayerControls)
                 {
-                    if (player.NetId != PlayerControl.LocalPlayer.NetId && player.Data.IsDead==false)
+                    if (player.NetId != JENJGDMOEOC.LocalPlayer.NetId && player.CJJDCBHJGBL.DOBEJNDNPJI) //DOBE is test, if not, OKD or PHM
                     {
                         float playerX = player.NetTransform.transform.position.x;
                         float playerY = player.NetTransform.transform.position.y;
-                        float localX = PlayerControl.LocalPlayer.transform.position.x;
-                        float localY = PlayerControl.LocalPlayer.transform.position.y;
+                        float localX = JENJGDMOEOC.LocalPlayer.transform.position.x;
+                        float localY = JENJGDMOEOC.LocalPlayer.transform.position.y;
 
                         float xDistance = Math.Abs(localX - playerX);
                         float yDistance = Math.Abs(localY - playerY);
@@ -46,7 +46,7 @@ namespace InfiniKillPlugin
             }
         }
         
-        [HarmonyPatch(typeof(KillButtonManager), nameof(KillButtonManager.SetCoolDown))]
+        [HarmonyPatch(typeof(EHFMOJPIKPE), nameof(EHFMOJPIKPE.SetCoolDown))]
         public static class KillPatch
         {
             public static void Postfix()
