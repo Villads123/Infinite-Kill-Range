@@ -5,7 +5,7 @@ using BepInEx;
 
 namespace InfiniKillPlugin
 {
-    [BepInPlugin("lol.xtracube.InfiniPlugin", "Infinite Kill Range", "1.0.0")]
+    [BepInPlugin("lol.xtracube.InfiniPlugin", "Infinite Kill Range", "1.1.0")]
     public class InfiniteKillPlugin : BasePlugin  
     {
 
