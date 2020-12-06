@@ -5,18 +5,19 @@ namespace InfiniKillPlugin
 {
     class KillPatches
     {
-        public static double CurDist = double.MaxValue; public static LBADNGJPJGH GetTargetPlayer()
+        public static double CurDist = double.MaxValue; 
+        public static BHHCHKFKPOE GetTargetPlayer()
         {
             CurDist = double.MaxValue;
-            LBADNGJPJGH target = LBADNGJPJGH.AllPlayerControls[0];
-            foreach (LBADNGJPJGH player in LBADNGJPJGH.AllPlayerControls)
+            BHHCHKFKPOE target = BHHCHKFKPOE.AllPlayerControls[0];
+            foreach (BHHCHKFKPOE player in BHHCHKFKPOE.AllPlayerControls)// DIFO or KHOAK | DFE FNH MKM
             {
-                if (player.NetId != LBADNGJPJGH.LocalPlayer.NetId && !player.NIFDFKDENKA.DHENNPCNJGB && !player.NIFDFKDENKA.FKGFOMBFMHD)
+                if (player.NetId != BHHCHKFKPOE.LocalPlayer.NetId && !player.DIFOAIGNFJF.DFEMAKIPLDO && !player.DIFOAIGNFJF.FNHEFMMHADP)
                 {
                     float playerX = player.NetTransform.transform.position.x;
                     float playerY = player.NetTransform.transform.position.y;
-                    float localX = LBADNGJPJGH.LocalPlayer.transform.position.x;
-                    float localY = LBADNGJPJGH.LocalPlayer.transform.position.y;
+                    float localX = BHHCHKFKPOE.LocalPlayer.transform.position.x;
+                    float localY = BHHCHKFKPOE.LocalPlayer.transform.position.y;
 
                     float xDistance = Math.Abs(localX - playerX);
                     float yDistance = Math.Abs(localY - playerY);
@@ -31,10 +32,11 @@ namespace InfiniKillPlugin
             return target;
         }
 
-        [HarmonyPatch(typeof(FEEPMKCPHAP), nameof(FEEPMKCPHAP.PerformKill))]
+        [HarmonyPatch(typeof(APCIFDAHMLI), nameof(APCIFDAHMLI.PerformKill))]
         public static class PerformKillPatch
         {
-            public static void Prefix(FEEPMKCPHAP __instance)
+            public static void Prefix(APCIFDAHMLI __instance)
+
             {
                 __instance.isActive = true;
                 __instance.SetTarget(GetTargetPlayer());
