@@ -10,7 +10,7 @@ namespace InfiniKillPlugin
         {
             CurDist = double.MaxValue;
             BHHCHKFKPOE target = BHHCHKFKPOE.AllPlayerControls[0];
-            foreach (BHHCHKFKPOE player in BHHCHKFKPOE.AllPlayerControls)// DIFO or KHOAK | DFE FNH MKM
+            foreach (BHHCHKFKPOE player in BHHCHKFKPOE.AllPlayerControls)
             {
                 if (player.NetId != BHHCHKFKPOE.LocalPlayer.NetId && !player.DIFOAIGNFJF.DFEMAKIPLDO && !player.DIFOAIGNFJF.FNHEFMMHADP)
                 {
